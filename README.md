@@ -3,8 +3,8 @@
 ```
 Mac
 Install virtual environment: sudo pip install virtualenv
-Create virtual environment: virtualenv virtual
-Enter virtual environment: source virtual/bin/activate
+Create virtual environment: virtualenv venv
+Enter virtual environment: source venv/bin/activate
 Exit virtual environment: deactivate
 
 Ubuntu
