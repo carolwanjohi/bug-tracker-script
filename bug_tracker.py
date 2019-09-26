@@ -1,4 +1,4 @@
-from api_requests import get_projects, get_unscheduled_bug_cards
+from api_requests import get_projects, get_unscheduled_bug_cards, post_to_bug_tracker_channel
 from utils import map_key_values, filter_bugs_states
 
 if __name__ == '__main__':
@@ -15,6 +15,8 @@ if __name__ == '__main__':
     inporgess_bugs_states = ['started', 'finished']
 
     inporgess_bugs = filter_bugs_states(bugs_found, inporgess_bugs_states)
+
+    post_to_bug_tracker_channel(inporgess_bugs, '*Inprogress*')
 
     done_bugs_states = ['delivered', 'accepted']
 

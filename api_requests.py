@@ -36,8 +36,7 @@ def get_unscheduled_bug_cards(project_ids):
 def post_to_bug_tracker_channel(list_of_bugs, state_of_bugs):
     slack_acctachments = { "text": state_of_bugs, "attachments": list_of_bugs}
     payload = json.dumps(slack_acctachments, default=obj_dict)
-    post(webhook, data=payload)
-    return "send to slack"
+    return post(webhook, data=payload)
 
 def obj_dict(obj):
     '''
